@@ -11,7 +11,7 @@ mod tests {
 
     #[test]
     fn test_ident() {
-        let pair = Grammar::parse(Rule::ident, "username")
+        let pair = Grammar::parse(Rule::name, "username")
             .expect("parsing failed")
             .next()
             .expect("no pair");
