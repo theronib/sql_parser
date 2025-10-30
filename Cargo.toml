@@ -1,0 +1,11 @@
+[package]
+name = "sql_parser"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "A simple parser for SQL queries"
+
+[dependencies]
+anyhow = "1.0.100"
+pest = "2.8.3"
+pest_derive = "2.8.3"
