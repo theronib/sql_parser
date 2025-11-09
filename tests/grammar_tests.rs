@@ -1,6 +1,6 @@
 use anyhow::anyhow;
 use pest::Parser;
-use sql_parser::*;
+use my_sql_parser::*;
 
 #[test]
 fn test_mini_select() -> anyhow::Result<()> {
