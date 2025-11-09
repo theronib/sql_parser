@@ -1,6 +1,6 @@
 use anyhow::Result;
 use pest::Parser;
-use sql_parser::*;
+use my_sql_parser::*;
 use std::env;
 use std::fs;
 
