@@ -1,7 +1,5 @@
 ### SQL queries parser
 
-**Crate: **
-
 This parser is used to simplify `SELECT` queries and extract columns, table name and optional condition.
 
 ### Parsing process
