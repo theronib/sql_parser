@@ -1,5 +1,7 @@
 ### SQL queries parser
 
+**Crate: https://crates.io/crates/my_sql_parser**
+
 This parser is used to simplify `SELECT` queries and extract columns, table name and optional condition.
 
 ### Parsing process
