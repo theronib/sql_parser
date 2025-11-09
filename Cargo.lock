@@ -75,6 +75,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273"
 
 [[package]]
+name = "my_sql_parser"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "pest",
+ "pest_derive",
+ "thiserror",
+]
+
+[[package]]
 name = "pest"
 version = "2.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -144,16 +154,6 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
-]
-
-[[package]]
-name = "sql_parser"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "pest",
- "pest_derive",
- "thiserror",
 ]
 
 [[package]]

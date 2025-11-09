@@ -1,5 +1,5 @@
 [package]
-name = "sql_parser"
+name = "my_sql_parser"
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
