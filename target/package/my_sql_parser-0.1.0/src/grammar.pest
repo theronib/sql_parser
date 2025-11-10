@@ -1,0 +1,25 @@
+WHITESPACE = _{ " " | "\t" | "\n" }
+
+name = @{ (ASCII_ALPHANUMERIC | "_")+ }
+number = @{ ASCII_DIGIT+ }
+string = @{ "'" ~ (!"'" ~ ANY)* ~ "'" } 
+
+comparison_operator = { ">=" | "<=" | "!=" | "=" | "<" | ">" }
+
+condition = { name ~ comparison_operator ~ (name | number | string) }
+
+multiple_conditions = { condition ~ (("AND" | "OR") ~ condition)* }
+
+order_by = { "ORDER" ~ "BY" ~ name ~ ("ASC" | "DESC")? }
+
+insert = { 
+    "INSERT" ~ "INTO" ~ name ~ 
+    "(" ~ name ~ ("," ~ name)* ~ ")" ~ 
+    "VALUES" ~ 
+    "(" ~ (name | number | string) ~ ("," ~ (name | number | string))* ~ ")" ~ ";"
+}
+
+query = { 
+    "SELECT" ~ name ~ "FROM" ~ name ~ ( "WHERE" ~ multiple_conditions )? ~ ( order_by )? ~ ";"
+}
+

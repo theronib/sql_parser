@@ -7,11 +7,11 @@ use std::fs;
 fn main() -> Result<()> {
     let mut args = env::args().skip(1);
     match args.next().as_deref() {
-        None | Some("--help") | Some("-h") => {
+        None | Some("--help") => {
             print_help();
             return Ok(());
         }
-        Some("--credits") | Some("-c") => {
+        Some("--credits") => {
             print_credits();
             return Ok(());
         }
